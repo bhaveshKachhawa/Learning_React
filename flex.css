@@ -1,0 +1,16 @@
+section{
+    border:2px solid black;
+    /* width:100%; */
+    /* height:100%; */
+    margin:auto;
+    background-color:blueviolet;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+div{
+    width:470px;
+    height:200px;
+    margin:5px;
+}
