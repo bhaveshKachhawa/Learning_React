@@ -1,0 +1,21 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.contanier {
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  border: 2px solid black;
+  height: 70vh;
+  width:70vw;
+}
+
+.box {
+    border:1px solid red;
+    width:100px;
+    height: 100px;
+}
