@@ -1,0 +1,33 @@
+.grid {
+    display:grid;
+    width:50%;
+    height:60%;
+    border:2px solid black;
+    grid-template-areas:"header header header header"
+                        "main main empty side-bar"
+                        "footer footer footer footer";
+}
+.grid>div {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.item1 {
+    grid-area:header;
+    background-color:orange;
+}
+.item2 {
+    grid-area:main;
+    background-color:blue;    
+}
+.item3 {
+    grid-area:empty;
+}
+.item4 {
+    grid-area:side-bar;
+    background-color:red;    
+}
+.item5 {
+    grid-area:footer;
+    background-color:green;
+}
