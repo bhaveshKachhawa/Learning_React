@@ -1,0 +1,66 @@
+body {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.container {
+    width:40%;
+    height:60%;
+    display:grid;
+    grid-template-areas:"red1 red2 red3"
+                        "red1 red2 red3"
+                        "red1 red2 red3"
+                        "red1 red2 red3"
+                        "red1 red5 red3"
+                        "red1 red8 red3"
+                        "red1 red8 red3"
+                        "red4 .    red6"
+                        "red7 .    red6"
+                        "red7 .    .   ";
+    gap:5px;
+}
+
+.container>div {
+    background-color:red;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:bold;
+}
+
+.item1 {
+    grid-area:red1;
+    font-size:30px;
+}
+
+.item2 {
+    grid-area:red2;
+    font-size:30px;
+}
+
+.item3 {
+    grid-area:red3;
+    font-size:30px;
+}
+
+.item4 {
+    grid-area:red4;
+}
+
+.item5 {
+    grid-area:red5;
+}
+
+.item6 {
+    grid-area:red6;
+}
+
+.item7 {
+    grid-area:red7;
+}
+
+.item8 {
+    grid-area:red8;
+    height:130%;
+}
