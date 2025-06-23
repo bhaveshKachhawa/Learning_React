@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangle with Transform</title>
+    <style>
+        /* Center the shape in the middle of the page */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        /* Create a square and use transform to rotate it into a triangle */
+        .triangle {
+            width: 0;
+            height: 0;
+            border-left: 50px solid red;
+            border-right: 50px solid pink;
+            border-bottom: 100px solid green;
+        }
+    </style>
+</head>
+<body>
+    <div class="triangle"></div>
+</body>
+</html>
