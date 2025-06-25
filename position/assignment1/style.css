@@ -1,0 +1,27 @@
+.header {
+    position: sticky;
+    top: 0;
+    background-color: pink;
+    padding: 10px;
+    text-align: center;
+}
+
+.sidebar {
+    position: fixed;
+    top: 60px;
+    width: 150px;
+    height: 100%;
+    background-color: green;
+    padding: 15px;
+}
+
+.content {
+    margin-left: 170px;
+    padding: 20px;
+}
+
+.box {
+    background-color: grey;
+    padding: 20px;
+    margin-bottom: 20px;
+}
