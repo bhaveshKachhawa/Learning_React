@@ -1,0 +1,43 @@
+nav, footer {
+    background-color: grey;
+    height: 60px;
+    font-size: 50px;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+}
+
+nav {
+    position:fixed;
+}
+footer {
+    margin-top: 70px;
+    position:relative;
+}
+
+.main-container {
+    background-color: pink;
+    width:20%;
+    position: relative;
+    left:40%;
+    top:60px;
+    border:2px solid black;
+}
+
+.sidebar {
+    background-color: lightblue;
+    top: 70px;
+    width: 20%;
+    position: fixed;
+    left:80%;
+    height: 100px;
+    border:2px solid black;
+}
+
+button {
+    background-color: black;
+    right: 20px;
+    position: fixed;
+    bottom: 70px;
+    z-index: 20;
+}
