@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TODO List with Completion</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background: #e9f7ef;
+    }
+    h2 {
+      color: #2c3e50;
+    }
+    input, button {
+      padding: 10px;
+      font-size: 16px;
+      margin-right: 5px;
+    }
+    ul {
+      margin-top: 20px;
+      padding-left: 0;
+    }
+    li {
+      background: #ffffff;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .completed {
+      text-decoration: line-through;
+      color: gray;
+    }
+    .remove-btn {
+      background: #e74c3c;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>TODO List (with completion)</h2>
+  <input type="text" id="taskInput" placeholder="Add a task..." />
+  <button onclick="addTask()">Add Task</button>
+
+  <ul id="taskList"></ul>
+
+  <script>
+    function addTask() {
+      const input = document.getElementById('taskInput');
+      const taskText = input.value.trim();
+      if (!taskText) return;
+
+      const li = document.createElement('li');
+      li.innerHTML = `
+        <span>
+          <input type="checkbox" class="toggle-complete" />
+          <span class="task-text">${taskText}</span>
+        </span>
+        <button class="remove-btn">Remove</button>
+      `;
+      document.getElementById('taskList').appendChild(li);
+
+      input.value = '';
+      input.focus();
+    }
+
+    // Event delegation for remove and complete toggle
+    document.getElementById('taskList').addEventListener('click', function(event) {
+      if (event.target.classList.contains('remove-btn')) {
+        event.target.closest('li').remove();
+      } else if (event.target.classList.contains('toggle-complete')) {
+        const textSpan = event.target.nextElementSibling;
+        textSpan.classList.toggle('completed');
+      }
+    });
+  </script>
+
+</body>
+</html>
