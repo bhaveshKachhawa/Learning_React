@@ -540,4 +540,6 @@ const jsonString = [`{
 }`
 ];
 
-export default jsonString;
+const resCardObj = jsonString.map((restaurant) => JSON.parse(restaurant));
+
+export default resCardObj;

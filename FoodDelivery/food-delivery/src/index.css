@@ -41,9 +41,16 @@
 }
 
 .res-container {
-    border:2px solid black;
     display: flex;
     flex-wrap:wrap;
     gap:12px;
     justify-content:center;
+}
+
+.btn {
+    padding: 8px 5px;
+}
+
+.btn-filter {
+    cursor:pointer;
 }
