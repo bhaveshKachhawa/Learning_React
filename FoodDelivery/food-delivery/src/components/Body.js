@@ -1,6 +1,7 @@
 import RestaurentCard from './RestaurentCard';
 import {useState,useEffect} from 'react';
 import Shimmer from './Shimmer';
+import {Link} from 'react-router-dom';
 
 const Body = () => {
   const [restaurent, setRestaurant] = useState([]);
@@ -27,7 +28,7 @@ const fetchData = async() => {
     setSearchValue("");
   }
   
-  return restaurent.length == 0 ? <Shimmer />:(
+  return !restaurent || restaurent.length === 0 ? <Shimmer />:(
     <div className="body">
         <div className="btn">
           <button className="btn-filter" onClick={topRatedRes}>Top rated restaurant</button>
@@ -38,7 +39,7 @@ const fetchData = async() => {
         </div>
         <div className="res-container">
           {filterData.map((restaurant, index) => {
-            return (<RestaurentCard key={index} resData={restaurant} />);
+            return (<Link key={index} to={"restaurent/"+ restaurant.info.id}><RestaurentCard resData={restaurant}/></Link>);
           })}
         </div>
     </div>
