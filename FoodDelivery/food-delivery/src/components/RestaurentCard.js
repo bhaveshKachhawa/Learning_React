@@ -16,4 +16,12 @@ const RestaurentCard = (props) => {
   );
 }
 
+// const labeledRestaurentCard = (RestaurentCard) => {
+//   return () => {
+//     return (
+//       <label></label>
+//     );
+//   }
+// }
+
 export default RestaurentCard;

@@ -28,7 +28,7 @@ const {searchData} = useSearchData({setFilterData, restaurent,setSearchValue, se
         </div>
         <div className="res-container">
           {filterData.map((restaurant, index) => {
-            return (<Link key={index} to={"restaurent/"+ restaurant.info.id}><RestaurentCard resData={restaurant}/></Link>);
+            return (<Link key={index} to={"restaurent/"+ restaurant.info.name}><RestaurentCard resData={restaurant}/></Link>);
           })}
         </div>
     </div>

@@ -1,17 +1,24 @@
-import {useEffect} from 'react';
+import {useEffect, useState} from 'react';
+import {useParams} from 'react-router-dom';
+import { MOCK_MENU } from '../utils/constants';
+import RestaurentCatagory from './RestaurentCatagory';
 
 const RestaurentMenu = () => {
-    // const fetchData = async() => {
-    //     const jsonData = await fetch('https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=24.607913&lng=73.7330753&restaurantId=328817');
-    //     console.log(jsonData);
-    //     const data = await jsonData.json();
-    //     console.log(data);
-    // }
-
-    // useEffect(() => {fetchData()}, []);
-
+    const {name} = useParams();
+    const [showIndex, setShowIndex] = useState(null);
     return (
-        <div>hey wokring</div>
+        <div className="catagoryList">
+            <span style={{margin:"15px 0 15px 0"}}><h3>{name}</h3></span>
+            {MOCK_MENU.map((catagory, index) => {
+                return (
+                    <RestaurentCatagory key={catagory.id} data={catagory} show={index == showIndex?true:false}
+                    setShowIndex={()=> {
+                        index===showIndex?setShowIndex(null):setShowIndex(index);
+                    }
+                }/>
+                )
+            })}
+        </div>
     )
 }
 
