@@ -7,13 +7,17 @@ import AboutUs from './components/AboutUs';
 import Contact from './components/Contact';
 import RestaurentMenu from './components/RestaurentMenu'
 import {createBrowserRouter, RouterProvider, Outlet} from 'react-router-dom';
+import {Provider} from 'react-redux';
+import appStore from './redux/appStore';
 
 const AppLayout = () => {
   return (
+    <Provider store={appStore}>
     <div className="app ">
       <Header />
       <Outlet />
     </div>
+    </Provider>
   );
 }
 

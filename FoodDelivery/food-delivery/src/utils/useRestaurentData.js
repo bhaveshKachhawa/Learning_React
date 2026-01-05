@@ -12,7 +12,6 @@ const useRestaurentData = () => {
     }
     
       useEffect(() => { fetchData(); }, []);
-
     return {restaurent, filterData, setFilterData};    
 }
 

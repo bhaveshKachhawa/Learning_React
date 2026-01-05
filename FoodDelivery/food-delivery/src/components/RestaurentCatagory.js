@@ -10,8 +10,8 @@ const RestaurentCatagory = (props) => {
     }
 
     return (
-        <div className="catagory" onClick={displayItem}>
-            <div className="accordianHeader">
+        <div className="catagory">
+            <div className="accordianHeader" onClick={displayItem}>
                 <span>{data.title} ({data.items.length})</span>
                 <span>⬇️</span>
             </div>

@@ -122,11 +122,24 @@
     scale:0.9;
 }
 
-.addButton {
+.outerButton , .insidePlusButton, .insideMinusButton, .insideText{
     background-color: white;
     color:green;
     border:1px solid grey;
     border-radius:2px;
     position: absolute;
     right: 355px;
+}
+.insidePlusButton, .insideMinusButton, .insideText {
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+.insideMinusButton {
+    right: 400px;
+}
+
+.insideText {
+    right:380px;
 }

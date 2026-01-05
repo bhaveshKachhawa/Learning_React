@@ -16,7 +16,11 @@ const {restaurent, filterData, setFilterData} = useRestaurentData();
 const {topRatedRes} = useTopRatedRes(setFilterData, restaurent);
 const {searchData} = useSearchData({setFilterData, restaurent,setSearchValue, searchValue});
 
-  return restaurent.length === 0 ? <Shimmer />:(
+if (!restaurent || restaurent.length === 0 || !filterData || filterData.length === 0) {
+    return <Shimmer />;
+}
+else{ 
+  return (
     <div className="body">
         <div className="btn">
           <button className="btn-filter" onClick={allRestaurents}>All restaurants</button>
@@ -32,7 +36,7 @@ const {searchData} = useSearchData({setFilterData, restaurent,setSearchValue, se
           })}
         </div>
     </div>
-  );
+  )}
 }
 
 export default Body;
