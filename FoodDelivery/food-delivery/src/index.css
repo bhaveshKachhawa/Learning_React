@@ -71,7 +71,9 @@
 
 .login-btn {
     cursor:pointer;
-    border-radius: 10px;
+    border-radius: 5px;
+    border:1px solid black;
+    background-color: white;
 }
 
 .userList {
@@ -93,7 +95,6 @@
 }
 
 .catagory {
-    cursor:pointer;
     box-shadow: 5px 5px 5px rgb(160, 157, 157);
     width:50%;
     background-color:rgb(252, 242, 242);
@@ -122,24 +123,28 @@
     scale:0.9;
 }
 
-.outerButton , .insidePlusButton, .insideMinusButton, .insideText{
+.outerButton , .cartButton{
     background-color: white;
     color:green;
     border:1px solid grey;
     border-radius:2px;
     position: absolute;
     right: 355px;
-}
-.insidePlusButton, .insideMinusButton, .insideText {
-    padding-left: 10px;
-    padding-right: 10px;
-
+    cursor:pointer;
 }
 
-.insideMinusButton {
-    right: 400px;
+.insideButton {
+    border:none;
+    color:green;
+    padding: 0px 8px 0px 8px;
+    cursor:pointer;
 }
 
-.insideText {
-    right:380px;
+.cartData {
+    margin-left:70px;
+    box-shadow: 5px 5px 5px rgb(160, 157, 157);
+    background-color:rgb(255, 249, 249);
+    color:black;
+    font-weight: bold;
+    padding-left: 5px;
 }

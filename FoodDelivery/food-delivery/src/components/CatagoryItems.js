@@ -5,6 +5,7 @@ import {useState} from 'react';
 import {useSelector} from 'react-redux';
 
 const CatagoryItems = (props) => {
+    // console.log(props);
     const {items} = props.itemsList;
     const cartData = useSelector((store) => store.cart.items);
     const dispatch = useDispatch();
@@ -14,11 +15,12 @@ const CatagoryItems = (props) => {
     }
 
     const removeFromCart = (item) => {
+        // console.log(item);
         dispatch(removeItem(item));
     }
 
     return (
-        items.map((item) => {
+        items?.map((item) => {
             return (
                 <div className="accordianData" key={item.id}>
                     <div>
@@ -30,10 +32,10 @@ const CatagoryItems = (props) => {
                         <img src={item.image} className="itemImage"/>   
                         {cartData.indexOf(item) === -1?
                         <button className="outerButton" onClick={() => addedToCart(item)}>ADD+</button>:
-                        <span>
-                            <button className="insideMinusButton" onClick={() => removeFromCart(item)}>-</button>
-                            <span className="insideText">{cartData.filter((value) => value===item).length}</span>
-                            <button className="insidePlusButton" onClick={() => addedToCart(item)}>+</button> 
+                        <span className="outerButton">
+                            <button className="insideButton" onClick={() => removeFromCart(item)}>-</button>
+                            <span>{cartData.filter((value) => value===item).length}</span>
+                            <button className="insideButton" onClick={() => addedToCart(item)}>+</button> 
                         </span>}
                     </div>
                 </div>

@@ -1,4 +1,4 @@
-import {createSlice} from '@reduxjs/toolkit';
+import {createSlice, current} from '@reduxjs/toolkit';
 
 const cartSlice = createSlice({
     name:'cart',
@@ -7,14 +7,15 @@ const cartSlice = createSlice({
     },
     reducers:{
         addItem:(state, action) =>{
-            state.items.push(action.payload);
+            const index = state.items.findLastIndex((data) => data.id === action.payload.id);
+            index != -1?state.items.splice(index+1, 0, action.payload):state.items.push(action.payload);
         },
         removeItem:(state, action) => {
-            const index = state.items.indexOf(action.payload);
-            state.items.pop(index);
+            const index = state.items.findIndex((data) => data.id === action.payload.id);
+            state.items.splice(index, 1);
         },
         emptyCart:(state) => {
-            state.items.erase();
+            state.items.length = 0;
         }
     }
 });

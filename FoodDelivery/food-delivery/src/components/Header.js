@@ -17,7 +17,7 @@ const Header = () => {
         <li><Link to="/">Home</Link></li>
         <li><Link to="/about-us">About us</Link></li>
         <li><Link to="/contact">Contact</Link></li>
-        <li>Cart ({cartData.length})</li>
+        <li><Link to="/cart">Cart ({cartData.length})</Link></li>
         <li><button className="login-btn" onClick={()=>btn === "Login"?setBtn("Log-out"):setBtn("Login")}>{btn}</button></li>
       </ul>
     </div>
