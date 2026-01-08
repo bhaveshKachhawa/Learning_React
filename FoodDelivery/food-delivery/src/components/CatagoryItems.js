@@ -5,7 +5,6 @@ import {useState} from 'react';
 import {useSelector} from 'react-redux';
 
 const CatagoryItems = (props) => {
-    // console.log(props);
     const {items} = props.itemsList;
     const cartData = useSelector((store) => store.cart.items);
     const dispatch = useDispatch();
@@ -15,7 +14,6 @@ const CatagoryItems = (props) => {
     }
 
     const removeFromCart = (item) => {
-        // console.log(item);
         dispatch(removeItem(item));
     }
 

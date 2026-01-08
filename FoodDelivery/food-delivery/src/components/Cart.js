@@ -1,11 +1,11 @@
 import CatagoryItems from "./CatagoryItems"
-import {useSelector} from 'react-redux';
+import {useSelector, useDispatch} from 'react-redux';
+import { emptyCart } from "../redux/cart";
 
 const Cart = () => {
     let cartData = useSelector((store) => store.cart.items);
-    console.log(cartData);
+    const dispatch = useDispatch();
     let filteredCartData = [];
-    // console.log(filteredCartData);
     filteredCartData = cartData.filter((value) => {
         if(filteredCartData.reduce((acc, data) => {
             if(data.id === value.id) {
@@ -17,9 +17,14 @@ const Cart = () => {
         filteredCartData.push(value);
         return true;}
     });
-    // console.log(filteredCartData);
-    return (
-        <div style={{display:"flex", justifyContent:"center"}}>
+
+    const removeCart = () => {
+        dispatch(emptyCart());
+    }
+
+    return (cartData.length === 0)?<center><h2>Opps! Your cart is empty.</h2></center>:(
+        <div style={{display:"flex", flexDirection:"Column",alignItems:"center",marginTop:"20px"}}>
+            <button onClick={removeCart}>Empty Cart</button>
             <div className="cartData">
                 <CatagoryItems itemsList={{items:filteredCartData}}/>
             </div>

@@ -4,8 +4,6 @@ import CatagoryItems from './CatagoryItems';
 
 const RestaurentCatagory = (props) => {
     const {data, show, setShowIndex} = props;
-    // console.log(data, "hghjgjgjgjh");
-
     const displayItem = () => {
         setShowIndex();
     }
