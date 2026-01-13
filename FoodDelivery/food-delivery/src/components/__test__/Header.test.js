@@ -37,8 +37,8 @@ it("Should load the header and when click on login button it chaange to logout",
         </BrowserRouter>
     );
 
-    const button = screen.getByRole("Button", {name:"Login"});
-    fireEvent.click(button);
-    button = screen.getByRole("Button", {name:'Log-out'});
-    expect(button).toBeInTheDocument();
+    const button1 = screen.getByRole("Button", {name:"Login"});
+    fireEvent.click(button1);
+    const button2 = screen.getByRole("Button", {name:'Log-out'});
+    expect(button2).toBeInTheDocument();
 });
