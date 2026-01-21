@@ -8,10 +8,10 @@ const AccordianHeader = ({obj, show, setShow, index}) => {
         if(indexValue !== index){
             console.log("yes");
             setShow("-");
-            setIndexValue(index);
+            // setIndexValue(index);
         }
         else
-            show !== "-"?setShow("-"):setShow("+");
+            // show !== "-"?setShow("-"):setShow("+");
     }
 
     return (
