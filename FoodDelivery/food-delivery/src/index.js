@@ -1,6 +1,6 @@
 import './index.css';
 import {createRoot} from 'react-dom/client';
-import App3 from './component/App3';
+import App5 from './component/App5';
 
 const root = createRoot(document.getElementById('root'));
-root.render(<App3 />);
+root.render(<App5 />);

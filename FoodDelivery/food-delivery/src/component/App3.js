@@ -1,12 +1,13 @@
-import Accordian from "./Accordian";
+import AccordianHeader from "./AccordianHeader";
 import { useState } from "react";
 
 const App3 = () => {
-    const [isAllow, setIsAllow] = useState(true);
+     const [indexValue, setIndexValue] = useState(null);
+     const [accordion, setAccordian] = useState(true);
 
-    const handleChange = (e) => {
-        setIsAllow(!isAllow);
-    }
+     const handleChange = (e) =>{
+        setAccordian(e.target.checked);
+     }
 
     const accordianArray = [
   {
@@ -33,9 +34,11 @@ const App3 = () => {
 
     return (
         <div>
-        Is multiple open accordion allowed?<input type="checkbox" defaultChecked onChange={() => handleChange()}/>
+        Is multiple open accordion allowed?<input type="checkbox" defaultChecked onChange={(e) => handleChange(e)}/>
         {accordianArray.map((value, index) => {
-            return <Accordian key={index} obj={value} index={index}/>
+            return <AccordianHeader key={index} obj={value}  show={index === indexValue?"+":"-"} setIndexValue={() => {
+                index === indexValue?setIndexValue(null):setIndexValue(index);
+            }} accordion={accordion}/>
         })}
         </div>
     );
