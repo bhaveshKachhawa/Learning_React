@@ -138,3 +138,20 @@ img {
    grid-row:2/3;
    grid-column:1/3;
  } */
+
+ .mainBox {
+   display:flex;
+   flex-direction:column;
+   align-items:center;
+ }
+
+ .mainBox >input {
+   width:40%;
+   height:30px;
+ }
+
+ .innerBox {
+   align-items:flex-start;
+   padding: 20px;
+   margin:4px;
+ }
