@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const App4 = () => {
+const App2 = () => {
     const [clickIndex, setClickIndex] = useState(0);
     const [hoverIndex, setHoverIndex] = useState(null);
     const arr = [1,1,1,1,1];
@@ -19,4 +19,4 @@ const App4 = () => {
     );
 }
 
-export default App4;
+export default App2;

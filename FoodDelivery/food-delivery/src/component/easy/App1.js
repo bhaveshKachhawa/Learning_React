@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const App6 = () => {
+const App1 = () => {
     const [common, setCommon] = useState({
         label:"Add contact details for further communications.",
         btn:"Next",
@@ -81,4 +81,4 @@ const App6 = () => {
     );
 }
 
-export default App6;
+export default App1;

@@ -1,6 +1,6 @@
 import {useState} from 'react';
 
-const App5 = () => {
+const App3 = () => {
     const [show, setShow] = useState("");
     const arr = [1,2,3,4,5,6];
     const handleChange = (e) => {
@@ -33,4 +33,4 @@ const App5 = () => {
     )
 }
 
-export default App5;
+export default App3;

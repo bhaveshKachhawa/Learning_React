@@ -17,7 +17,7 @@ const AccordianHeader = ({obj, show, setIndexValue, accordion}) => {
         <div >
             <div className="accrodianHeader"><h3>{obj.header}</h3>
             <button className="btn" onClick={() => handleClick()}>{accordion?show:updateShow}</button></div>
-            {((accordion?show:updateShow) != "-") && <AccordianData data={obj.data}/>}
+            {((accordion?show:updateShow) !== "-") && <AccordianData data={obj.data}/>}
         </div>
     );
 }
