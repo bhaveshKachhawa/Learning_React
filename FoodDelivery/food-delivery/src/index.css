@@ -1,12 +1,9 @@
-/* app */
 .main {
     display:flex;
     flex-direction:column;
     align-items:center;
 }
 
-
-/* app2 */
 .main2 {
     display:flex;
     justify-content:center;
@@ -104,14 +101,10 @@ img {
    display:grid;
    grid-template-areas:"red red green yellow yellow yellow"
                         "black black black pink pink pink";
-   /* grid-template-columns:2fr 1fr 3fr; */
-   /* border:2px solid black; */
  }
 
  .grid>div{
-   /* width:100px; */
    height:100px;
-   /* background-color: red; */
    border:2px solid black;
  }
 .item1 {
@@ -134,11 +127,6 @@ img {
    grid-area:pink;
    background-color: pink;;
 }
- /* .item4 {
-   grid-row:2/3;
-   grid-column:1/3;
- } */
-
  .mainBox {
    display:flex;
    flex-direction:column;
@@ -172,4 +160,14 @@ body {
    height:50px;
    margin-bottom:10px;
    border-radius:50%;
+ }
+
+ .miniBox {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width:50px;
+   height: 30px;
+   border: 1px solid black;
+   margin:1px; 
  }
