@@ -1,7 +1,7 @@
 import AccordianHeader from "./AccordianHeader";
 import { useState } from "react";
 
-const App3 = () => {
+const App4 = () => {
      const [indexValue, setIndexValue] = useState(null);
      const [accordion, setAccordian] = useState(true);
 
@@ -44,4 +44,4 @@ const App3 = () => {
     );
 }
 
-export default App3;
+export default App4;
