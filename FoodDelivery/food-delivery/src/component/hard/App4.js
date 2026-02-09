@@ -1,6 +1,6 @@
 import { useState } from "react";
 import CheckBox from "./CheckBox";
-
+//if i pass obj rather then array //js problem solving //array related questions
 const App4 = () => {
     const [data, setData] = useState([
         {
@@ -61,6 +61,34 @@ const App4 = () => {
             checked:false
         }
     ]);
+
+    const deleteData = (id) => {
+        const update = (data) => {
+            return data.filter((item, index) => {
+                    if(item.id !== id) return item;
+            }).map((item, index) => {
+                return item.child?{...item,child:update(item.child)}:{...item};
+            });
+        }
+        setData(update(data));
+    }
+
+    const saveData = (id,newName) => {
+        console.log(id);
+        const update = (data) => {
+            return data.map((item, index) => {
+                if(item.id === id) {
+                    return {
+                        ...item,
+                        name:newName
+                    }
+                }
+                return item.child?{...item,child:update(item.child)}:item;
+            });
+        }
+        setData(update(data));
+    }
+
 const handleData = (id) => {
 
     const toggleAllChildren = (item, status) => {
@@ -92,7 +120,7 @@ const handleData = (id) => {
     return (
         <div style={{"marginLeft":"20"}}>
             {data.map((item, index) => {
-                return <CheckBox item={item} key={index} handleData={(id) => handleData(id)}/>
+                return <CheckBox item={item} key={index} handleData={(id) => handleData(id)} saveData={(id, newName) => saveData(id, newName)} deleteData={(id) => deleteData(id)}/>
             })}
         </div>
     );
