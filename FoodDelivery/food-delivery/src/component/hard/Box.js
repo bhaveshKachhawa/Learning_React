@@ -17,5 +17,5 @@ const Box = ({obj, updateData}) => {
     </div>
 );
 }
-
+//no shortcut
 export default Box;

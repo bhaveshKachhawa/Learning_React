@@ -1,6 +1,6 @@
 import { useState } from "react";
 import CheckBox from "./CheckBox";
-//if i pass obj rather then array //js problem solving //array related questions
+
 const App4 = () => {
     const [data, setData] = useState([
         {

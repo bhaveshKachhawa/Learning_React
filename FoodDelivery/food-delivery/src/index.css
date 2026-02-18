@@ -171,3 +171,16 @@ body {
    border: 1px solid black;
    margin:1px; 
  }
+
+ @keyframes frame {
+   from {
+      transform:translateX(200px);
+   }
+   to {
+      transform:translateX(0);
+   }
+ }
+ 
+ .anime {
+   animation:frame 1s 1;
+ }
