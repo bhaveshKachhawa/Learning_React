@@ -10,3 +10,5 @@ const user2 = {
 };
 
 user1.printName.call(user2, "Bangalore");
+//call apply bind any race all polyfill imp
+//race any exmaple
