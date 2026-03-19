@@ -1,14 +1,9 @@
-const user1 = {
-  name: "Bhavesh",
-  printName: function (city) {
-    console.log(`${this.name} is from ${city}`);
-  },
-};
+function sayHello(city, country) {
+  console.log(`Hello! I am ${this.name} from ${city}, ${country}.`);
+}
 
-const user2 = {
-  name: "Shafi",
-};
+const user1 = { name: "Bhavesh" };
+const user2 = { name: "Shafi" };
 
-user1.printName.call(user2, "Bangalore");
-//call apply bind any race all polyfill imp
-//race any exmaple
+sayHello.call(user1, "Ajmer", "India");
+sayHello.apply(user2, ["Bangalore", "India"]);
