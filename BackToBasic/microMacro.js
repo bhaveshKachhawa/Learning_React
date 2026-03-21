@@ -4,7 +4,14 @@ async function async1() {
   console.log("async1 end");
 }
 //micor task
-//macro/task []
+//macro/task []6. implement basic debounce()
+JavaScript
+Lodash
+easy
+42655 tried
+5. implement throttle() with leading & trailing option
+JavaScript
+Lo
 
 async function async2() {
   console.log("async2");
