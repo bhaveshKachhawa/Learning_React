@@ -1,7 +1,7 @@
 import "./index.css";
 import { createRoot } from "react-dom/client";
-import App4 from "./component/medium/App4";
+import Test2 from "./component/easy/test2";
 //check app1 refactor
 
 const root = createRoot(document.getElementById("root"));
-root.render(<App4 />);
+root.render(<Test2 />);
